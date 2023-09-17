@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.routesscreen.RoutesActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardDriverInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal">
+
+            <TextView
+                android:id="@+id/textDriverTitle"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/driver_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textDriverName"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_more"
+                app:layout_constraintStart_toEndOf="@id/textDriverTitle"
+                app:layout_constraintTop_toTopOf="@id/textDriverTitle" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardDriverInfo">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal">
+
+            <TextView
+                android:id="@+id/textRouteType"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/route_type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textRouteTypeValue"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_more"
+                app:layout_constraintStart_toEndOf="@id/verticalBarrier"
+                app:layout_constraintTop_toTopOf="@id/textRouteType" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/verticalBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="right"
+                app:constraint_referenced_ids="textRouteType, textRouteName" />
+
+            <TextView
+                android:id="@+id/textRouteName"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:text="@string/route_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textRouteType" />
+
+            <TextView
+                android:id="@+id/textRouteNameValue"
+                style="@style/TextAppearance.Material3.BodyLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_more"
+                app:layout_constraintStart_toEndOf="@id/verticalBarrier"
+                app:layout_constraintTop_toTopOf="@id/textRouteName" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

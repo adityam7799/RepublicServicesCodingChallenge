@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Maddukuri Republic Services</string>
+    <string name="driver_screen_title">Drivers</string>
+    <string name="route_screen_title">Route</string>
+    <string name="sort">Sort Icon</string>
+    <string name="driver_name">Driver Name</string>
+    <string name="route_type">Route Type</string>
+    <string name="route_name">Route Name</string>
+</resources>
